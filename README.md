@@ -1,4 +1,4 @@
-# todo-list
+# Todo List
 Very simple todo list project
 Todo List is a FREE and open source task manager.
 This app requires no special permissions to run. I'm respect your privacy.
