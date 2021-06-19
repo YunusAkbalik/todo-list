@@ -1,14 +1,11 @@
 // Nesneleri tanımlama
-
 const form = document.getElementById("todo-form")
 const todoInput = document.querySelector("#todo")
 const todoList = document.querySelector("ul")
 const firstCardbody = document.querySelectorAll(".card-body")[0]
 const secondCardBody = document.querySelectorAll(".card-body")[1]
 const filter = document.querySelector("#filter")
-
 eventListeners()
-
 function eventListeners() { // Tüm event listenerlar
     form.addEventListener("submit", addTodo)
     document.addEventListener("DOMContentLoaded", loadAllTodosToUI)
@@ -30,7 +27,6 @@ function filterTodos(e) {
     })
 }
 function deleteTodo(e) {
-
     if (e.target.className === "fa fa-remove") {
         e.target.parentElement.parentElement.remove()
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent)
@@ -50,8 +46,6 @@ function deleteTodo(e) {
                 showalert("danger", "Silinecek bir todo bulunamadı.")
             }
         }
-
-
     }
 }
 function deleteTodoFromStorage(todo) {
@@ -79,12 +73,8 @@ function addTodo(e) {
         addTodoToStorage(newTodo)
         showalert("success", "Başarıyla eklendi")
     }
-
-
     e.preventDefault()
 }
-
-
 function getTodosFromStorage() {
     let todos
     if (localStorage.getItem("todos") === null) {
